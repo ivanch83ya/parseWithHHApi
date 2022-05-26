@@ -1,30 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net5.0-windows7.0": {
-      "HHLibrary/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "compile": {
-          "bin/placeholder/HHLibrary.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/HHLibrary.dll": {}
-        }
-      }
-    }
+    "net5.0": {}
   },
-  "libraries": {
-    "HHLibrary/1.0.0": {
-      "type": "project",
-      "path": "../HHLibrary/HHLibrary.csproj",
-      "msbuildProject": "../HHLibrary/HHLibrary.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    "net5.0-windows7.0": [
-      "HHLibrary >= 1.0.0"
-    ]
+    "net5.0": []
   },
   "packageFolders": {
     "C:\\Users\\vladi\\.nuget\\packages\\": {},
@@ -34,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "I:\\Udemy\\HH_Api\\HHBot\\HHBot.csproj",
-      "projectName": "HHBot",
-      "projectPath": "I:\\Udemy\\HH_Api\\HHBot\\HHBot.csproj",
+      "projectUniqueName": "I:\\Udemy\\HH_Api\\HHLibrary\\HHLibrary.csproj",
+      "projectName": "HHLibrary",
+      "projectPath": "I:\\Udemy\\HH_Api\\HHLibrary\\HHLibrary.csproj",
       "packagesPath": "C:\\Users\\vladi\\.nuget\\packages\\",
-      "outputPath": "I:\\Udemy\\HH_Api\\HHBot\\obj\\",
+      "outputPath": "I:\\Udemy\\HH_Api\\HHLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -51,20 +32,16 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net5.0-windows7.0"
+        "net5.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net5.0-windows7.0": {
-          "targetAlias": "net5.0-windows",
-          "projectReferences": {
-            "I:\\Udemy\\HH_Api\\HHLibrary\\HHLibrary.csproj": {
-              "projectPath": "I:\\Udemy\\HH_Api\\HHLibrary\\HHLibrary.csproj"
-            }
-          }
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -74,8 +51,8 @@
       }
     },
     "frameworks": {
-      "net5.0-windows7.0": {
-        "targetAlias": "net5.0-windows",
+      "net5.0": {
+        "targetAlias": "net5.0",
         "imports": [
           "net461",
           "net462",
@@ -86,18 +63,9 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[5.0.16, 5.0.16]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
-          },
-          "Microsoft.WindowsDesktop.App.WindowsForms": {
-            "privateAssets": "none"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"

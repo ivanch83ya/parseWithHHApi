@@ -1,0 +1,12 @@
+I:\Udemy\HH_Api\HHLibrary\bin\Debug\net5.0\HHLibrary.deps.json
+I:\Udemy\HH_Api\HHLibrary\bin\Debug\net5.0\HHLibrary.dll
+I:\Udemy\HH_Api\HHLibrary\bin\Debug\net5.0\ref\HHLibrary.dll
+I:\Udemy\HH_Api\HHLibrary\bin\Debug\net5.0\HHLibrary.pdb
+I:\Udemy\HH_Api\HHLibrary\obj\Debug\net5.0\HHLibrary.csproj.AssemblyReference.cache
+I:\Udemy\HH_Api\HHLibrary\obj\Debug\net5.0\HHLibrary.GeneratedMSBuildEditorConfig.editorconfig
+I:\Udemy\HH_Api\HHLibrary\obj\Debug\net5.0\HHLibrary.AssemblyInfoInputs.cache
+I:\Udemy\HH_Api\HHLibrary\obj\Debug\net5.0\HHLibrary.AssemblyInfo.cs
+I:\Udemy\HH_Api\HHLibrary\obj\Debug\net5.0\HHLibrary.csproj.CoreCompileInputs.cache
+I:\Udemy\HH_Api\HHLibrary\obj\Debug\net5.0\HHLibrary.dll
+I:\Udemy\HH_Api\HHLibrary\obj\Debug\net5.0\ref\HHLibrary.dll
+I:\Udemy\HH_Api\HHLibrary\obj\Debug\net5.0\HHLibrary.pdb

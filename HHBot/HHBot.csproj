@@ -6,4 +6,8 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HHLibrary\HHLibrary.csproj" />
+  </ItemGroup>
+
 </Project>

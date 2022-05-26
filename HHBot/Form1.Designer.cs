@@ -29,20 +29,46 @@ namespace HHBot
         /// </summary>
         private void InitializeComponent()
         {
+            this.ResBox = new System.Windows.Forms.TextBox();
+            this.TestButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // ResBox
+            // 
+            this.ResBox.Location = new System.Drawing.Point(13, 39);
+            this.ResBox.Multiline = true;
+            this.ResBox.Name = "ResBox";
+            this.ResBox.Size = new System.Drawing.Size(775, 328);
+            this.ResBox.TabIndex = 0;
+            // 
+            // TestButton
+            // 
+            this.TestButton.Location = new System.Drawing.Point(13, 374);
+            this.TestButton.Name = "TestButton";
+            this.TestButton.Size = new System.Drawing.Size(258, 23);
+            this.TestButton.TabIndex = 1;
+            this.TestButton.Text = "ТЕСТ";
+            this.TestButton.UseVisualStyleBackColor = true;
+            this.TestButton.Click += new System.EventHandler(this.TestButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.TestButton);
+            this.Controls.Add(this.ResBox);
             this.Name = "Form1";
             this.Text = "HH API";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.TextBox ResBox;
+        private System.Windows.Forms.Button TestButton;
     }
 }
 

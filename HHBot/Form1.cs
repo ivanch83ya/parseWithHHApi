@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HHLibrary;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,5 +18,10 @@ namespace HHBot
             InitializeComponent();
         }
 
+        private void TestButton_Click(object sender, EventArgs e)
+        {
+            HHModel model = new HHModel();
+            ResBox.Text = model.RequestGet("http://api.hh.ru/vacancies/54450689");
+        }
     }
 }

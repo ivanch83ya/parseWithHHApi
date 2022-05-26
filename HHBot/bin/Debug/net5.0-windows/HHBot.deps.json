@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "HHBot/1.0.0": {
+        "dependencies": {
+          "HHLibrary": "1.0.0"
+        },
+        "runtime": {
+          "HHBot.dll": {}
+        }
+      },
+      "HHLibrary/1.0.0": {
+        "runtime": {
+          "HHLibrary.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "HHBot/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HHLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
