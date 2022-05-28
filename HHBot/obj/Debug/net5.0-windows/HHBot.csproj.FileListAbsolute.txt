@@ -19,3 +19,4 @@ I:\Udemy\HH_Api\HHBot\obj\Debug\net5.0-windows\HHBot.genruntimeconfig.cache
 I:\Udemy\HH_Api\HHBot\bin\Debug\net5.0-windows\HHLibrary.dll
 I:\Udemy\HH_Api\HHBot\bin\Debug\net5.0-windows\HHLibrary.pdb
 I:\Udemy\HH_Api\HHBot\obj\Debug\net5.0-windows\HHBot.csproj.CopyComplete
+I:\Udemy\HH_Api\HHBot\bin\Debug\net5.0-windows\Newtonsoft.Json.dll

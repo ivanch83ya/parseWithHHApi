@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "anGaEwemMfxCcP6llA5AKS8zAHlVck6evcqxHsu80Uriqgdqf+y/B0ezVo9F16idm1mof51d9ftwI4qzSRUogA==",
+  "dgSpecHash": "HKzHid2+w7NqjMIIDZvscnUecWD8IwJLhXKwJlD1a4aNsQaDImnGuprsZAwzCsJM/2y+LaMAefewT7iKNOf9dQ==",
   "success": true,
   "projectFilePath": "I:\\Udemy\\HH_Api\\HHBot\\HHBot.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\vladi\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\vladi\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.16\\microsoft.netcore.app.host.win-x64.5.0.16.nupkg.sha512"
   ],
   "logs": []

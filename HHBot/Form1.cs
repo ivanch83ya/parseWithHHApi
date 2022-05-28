@@ -18,10 +18,18 @@ namespace HHBot
             InitializeComponent();
         }
 
+        HHModel model = new HHModel();
+        string vacUrl = "http://api.hh.ru/vacancies/54450689";
+
         private void TestButton_Click(object sender, EventArgs e)
         {
-            HHModel model = new HHModel();
-            ResBox.Text = model.RequestGet("http://api.hh.ru/vacancies/54450689");
+            ResBox.Text = model.RequestGet(vacUrl);
+        }
+
+        private void buttonParse_Click(object sender, EventArgs e)
+        {
+            string tmpRes = model.RequestGet(vacUrl);
+            ResBox.Text = model.JsonParseString(tmpRes);
         }
     }
 }
