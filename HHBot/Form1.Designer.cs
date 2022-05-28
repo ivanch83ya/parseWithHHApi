@@ -29,59 +29,117 @@ namespace HHBot
         /// </summary>
         private void InitializeComponent()
         {
-            this.ResBox = new System.Windows.Forms.TextBox();
-            this.TestButton = new System.Windows.Forms.Button();
-            this.buttonParse = new System.Windows.Forms.Button();
+            this.GridView = new System.Windows.Forms.DataGridView();
+            this.searchBox = new System.Windows.Forms.TextBox();
+            this.buttonSearch = new System.Windows.Forms.Button();
+            this.Col_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Col_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Col_Salary_from = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Col_Salary_to = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Col_empl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Col_addr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Col_info = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.GridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // ResBox
+            // GridView
             // 
-            this.ResBox.Location = new System.Drawing.Point(13, 39);
-            this.ResBox.Multiline = true;
-            this.ResBox.Name = "ResBox";
-            this.ResBox.Size = new System.Drawing.Size(775, 328);
-            this.ResBox.TabIndex = 0;
+            this.GridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Col_ID,
+            this.Col_Name,
+            this.Col_Salary_from,
+            this.Col_Salary_to,
+            this.Col_empl,
+            this.Col_addr,
+            this.Col_info});
+            this.GridView.Dock = System.Windows.Forms.DockStyle.Top;
+            this.GridView.Location = new System.Drawing.Point(0, 0);
+            this.GridView.Name = "GridView";
+            this.GridView.RowTemplate.Height = 25;
+            this.GridView.Size = new System.Drawing.Size(1107, 248);
+            this.GridView.TabIndex = 3;
             // 
-            // TestButton
+            // searchBox
             // 
-            this.TestButton.Location = new System.Drawing.Point(13, 374);
-            this.TestButton.Name = "TestButton";
-            this.TestButton.Size = new System.Drawing.Size(258, 23);
-            this.TestButton.TabIndex = 1;
-            this.TestButton.Text = "ТЕСТ";
-            this.TestButton.UseVisualStyleBackColor = true;
-            this.TestButton.Click += new System.EventHandler(this.TestButton_Click);
+            this.searchBox.Location = new System.Drawing.Point(13, 264);
+            this.searchBox.Name = "searchBox";
+            this.searchBox.Size = new System.Drawing.Size(694, 23);
+            this.searchBox.TabIndex = 4;
             // 
-            // buttonParse
+            // buttonSearch
             // 
-            this.buttonParse.Location = new System.Drawing.Point(291, 374);
-            this.buttonParse.Name = "buttonParse";
-            this.buttonParse.Size = new System.Drawing.Size(149, 23);
-            this.buttonParse.TabIndex = 2;
-            this.buttonParse.Text = "Парсинг";
-            this.buttonParse.UseVisualStyleBackColor = true;
-            this.buttonParse.Click += new System.EventHandler(this.buttonParse_Click);
+            this.buttonSearch.Location = new System.Drawing.Point(713, 264);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearch.TabIndex = 5;
+            this.buttonSearch.Text = "Поиск";
+            this.buttonSearch.UseVisualStyleBackColor = true;
+            // 
+            // Col_ID
+            // 
+            this.Col_ID.HeaderText = "ID";
+            this.Col_ID.Name = "Col_ID";
+            // 
+            // Col_Name
+            // 
+            this.Col_Name.HeaderText = "Name";
+            this.Col_Name.Name = "Col_Name";
+            // 
+            // Col_Salary_from
+            // 
+            this.Col_Salary_from.HeaderText = "Зарплата от";
+            this.Col_Salary_from.Name = "Col_Salary_from";
+            // 
+            // Col_Salary_to
+            // 
+            this.Col_Salary_to.HeaderText = "Зарплата до";
+            this.Col_Salary_to.Name = "Col_Salary_to";
+            // 
+            // Col_empl
+            // 
+            this.Col_empl.HeaderText = "Employer";
+            this.Col_empl.Name = "Col_empl";
+            // 
+            // Col_addr
+            // 
+            this.Col_addr.HeaderText = "Адрес";
+            this.Col_addr.Name = "Col_addr";
+            // 
+            // Col_info
+            // 
+            this.Col_info.HeaderText = "Описание";
+            this.Col_info.MinimumWidth = 100;
+            this.Col_info.Name = "Col_info";
+            this.Col_info.Width = 400;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.buttonParse);
-            this.Controls.Add(this.TestButton);
-            this.Controls.Add(this.ResBox);
+            this.ClientSize = new System.Drawing.Size(1107, 450);
+            this.Controls.Add(this.buttonSearch);
+            this.Controls.Add(this.searchBox);
+            this.Controls.Add(this.GridView);
             this.Name = "Form1";
             this.Text = "HH API";
+            ((System.ComponentModel.ISupportInitialize)(this.GridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox ResBox;
-        private System.Windows.Forms.Button TestButton;
-        private System.Windows.Forms.Button buttonParse;
+        private System.Windows.Forms.DataGridView GridView;
+        private System.Windows.Forms.TextBox searchBox;
+        private System.Windows.Forms.Button buttonSearch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Col_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Col_Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Col_Salary_from;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Col_Salary_to;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Col_empl;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Col_addr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Col_info;
     }
 }
 

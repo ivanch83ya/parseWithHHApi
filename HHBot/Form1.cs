@@ -20,16 +20,19 @@ namespace HHBot
 
         HHModel model = new HHModel();
         string vacUrl = "http://api.hh.ru/vacancies?text=Программист";
+        //string tmpRes = model.RequestGet(vacUrl);
+        //ResBox.Text = model.JsonParseStringItems(tmpRes);
+
 
         private void TestButton_Click(object sender, EventArgs e)
         {
-            ResBox.Text = model.RequestGet(vacUrl);
+            //ResBox.Text = model.RequestGet(vacUrl);
         }
 
         private void buttonParse_Click(object sender, EventArgs e)
         {
             string tmpRes = model.RequestGet(vacUrl);
-            ResBox.Text = model.JsonParseStringItems(tmpRes);
+            //ResBox.Text = model.JsonParseStringItems(tmpRes);
         }
     }
 }
