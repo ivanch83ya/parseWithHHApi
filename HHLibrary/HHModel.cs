@@ -49,7 +49,35 @@ namespace HHLibrary
             tmp += " Зарплата с " + obj.salary.from + " до " + obj.salary.to + " " + obj.salary.currency + "\r\n";
             //tmp = ("{0} \nЗарплата с {1} до {2} {3}", obj.name, obj.salary.from, obj.salary.to, obj.salary.currence);
 
+            return tmp;
+        }
 
+        public string JsonParseStringItems(string json)
+        {
+            string tmp = "";
+            dynamic obj = JObject.Parse(json);
+
+            foreach (dynamic item in obj.items)
+            {
+                string salaryfrom = "-";
+                string salaryto = "-";
+                string salarycurr = "-";
+                tmp += item.id + "\r\n";
+                tmp += item.name + "\r\n";
+
+                if ( item.salary != null)
+                {
+                    salaryfrom = item.salary.from;
+                    salaryto = item.salary.to;
+                    salarycurr = item.salary.currency;
+                    tmp += " Зарплата с " + salaryfrom + " до " + salaryto + " " + salarycurr + "\r\n";
+                }
+                else
+                {
+                    tmp += " Зарплата не указана \r\n";
+                }
+                tmp += "======================================\r\n";
+            }
 
             return tmp;
         }

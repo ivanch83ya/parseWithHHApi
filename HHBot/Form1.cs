@@ -19,7 +19,7 @@ namespace HHBot
         }
 
         HHModel model = new HHModel();
-        string vacUrl = "http://api.hh.ru/vacancies/54450689";
+        string vacUrl = "http://api.hh.ru/vacancies?text=Программист";
 
         private void TestButton_Click(object sender, EventArgs e)
         {
@@ -29,7 +29,7 @@ namespace HHBot
         private void buttonParse_Click(object sender, EventArgs e)
         {
             string tmpRes = model.RequestGet(vacUrl);
-            ResBox.Text = model.JsonParseString(tmpRes);
+            ResBox.Text = model.JsonParseStringItems(tmpRes);
         }
     }
 }
