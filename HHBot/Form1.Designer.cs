@@ -36,6 +36,7 @@ namespace HHBot
             this.Col_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Col_Salary_from = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Col_Salary_to = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Col_Salary_curr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Col_empl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Col_addr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Col_info = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +51,7 @@ namespace HHBot
             this.Col_Name,
             this.Col_Salary_from,
             this.Col_Salary_to,
+            this.Col_Salary_curr,
             this.Col_empl,
             this.Col_addr,
             this.Col_info});
@@ -96,6 +98,11 @@ namespace HHBot
             this.Col_Salary_to.HeaderText = "Зарплата до";
             this.Col_Salary_to.Name = "Col_Salary_to";
             // 
+            // Col_Salary_curr
+            // 
+            this.Col_Salary_curr.HeaderText = "Валюта";
+            this.Col_Salary_curr.Name = "Col_Salary_curr";
+            // 
             // Col_empl
             // 
             this.Col_empl.HeaderText = "Employer";
@@ -137,6 +144,7 @@ namespace HHBot
         private System.Windows.Forms.DataGridViewTextBoxColumn Col_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Col_Salary_from;
         private System.Windows.Forms.DataGridViewTextBoxColumn Col_Salary_to;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Col_Salary_curr;
         private System.Windows.Forms.DataGridViewTextBoxColumn Col_empl;
         private System.Windows.Forms.DataGridViewTextBoxColumn Col_addr;
         private System.Windows.Forms.DataGridViewTextBoxColumn Col_info;

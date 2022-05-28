@@ -10,6 +10,54 @@ using Newtonsoft.Json.Linq;
 
 namespace HHLibrary
 {
+    struct Vacancy
+    {
+        string id;
+        string name;
+        string salary_from;
+        string salary_to;
+        string salary_currency;
+        string employer_name;
+        string address;
+        string info;
+
+        public Vacancy(dynamic obj)
+        {
+            this.id = obj.id;
+            this.name = obj.name;
+            if (obj.salary != null)
+            {
+                this.salary_from = (obj.salary.from == null) ? " " : obj.salary.from;
+                this.salary_to = (obj.salary.to == null) ? " " : obj.salary.to;
+                this.salary_currency = (obj.salary.currency == null) ? " " : obj.salary.currency;
+            }
+            else
+            {
+                this.salary_from = "-";
+                this.salary_to = "-";
+                this.salary_currency = "-";
+            }
+
+            this.employer_name = obj.employer.name;
+            if (obj.address != null)
+            {
+                this.address = obj.address.city + " " + obj.address.street + " " + obj.address.building;
+            }
+            else
+            {
+                this.address = "-";
+            }
+            if (obj.description != null)
+            {
+                this.info = obj.description;
+            }
+            else
+            {
+                this.info = "-";
+            }
+        }
+    }
+
     public class HHModel
     {
         /// <summary>
