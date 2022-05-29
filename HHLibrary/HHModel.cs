@@ -10,16 +10,16 @@ using Newtonsoft.Json.Linq;
 
 namespace HHLibrary
 {
-    struct Vacancy
+    public struct Vacancy
     {
-        string id;
-        string name;
-        string salary_from;
-        string salary_to;
-        string salary_currency;
-        string employer_name;
-        string address;
-        string info;
+        public string id { get; private set; }
+        public string name { get; private set; }
+        public string salary_from { get; private set; }
+        public string salary_to { get; private set; }
+        public string salary_currency { get; private set; }
+        public string employer_name { get; private set; }
+        public string address { get; private set; }
+        public string info { get; private set; }
 
         public Vacancy(dynamic obj)
         {
@@ -100,34 +100,18 @@ namespace HHLibrary
             return tmp;
         }
 
-        public string JsonParseStringItems(string json)
+        public List<Vacancy> JsonParseStringItems(string json)
         {
-            string tmp = "";
+            List<Vacancy> vacancies = new List<Vacancy>();
+
             dynamic obj = JObject.Parse(json);
 
             foreach (dynamic item in obj.items)
             {
-                string salaryfrom = "-";
-                string salaryto = "-";
-                string salarycurr = "-";
-                tmp += item.id + "\r\n";
-                tmp += item.name + "\r\n";
-
-                if ( item.salary != null)
-                {
-                    salaryfrom = item.salary.from;
-                    salaryto = item.salary.to;
-                    salarycurr = item.salary.currency;
-                    tmp += " Зарплата с " + salaryfrom + " до " + salaryto + " " + salarycurr + "\r\n";
-                }
-                else
-                {
-                    tmp += " Зарплата не указана \r\n";
-                }
-                tmp += "======================================\r\n";
+                vacancies.Add(new Vacancy(item));
             }
 
-            return tmp;
+            return vacancies;
         }
     }
 }

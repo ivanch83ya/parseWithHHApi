@@ -30,16 +30,17 @@ namespace HHBot
         private void InitializeComponent()
         {
             this.GridView = new System.Windows.Forms.DataGridView();
+            this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSalaryFrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSalaryTo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSalaryCurr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEmployer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colInfo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.searchBox = new System.Windows.Forms.TextBox();
             this.buttonSearch = new System.Windows.Forms.Button();
-            this.Col_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Col_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Col_Salary_from = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Col_Salary_to = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Col_Salary_curr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Col_empl = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Col_addr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Col_info = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblCount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.GridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,84 +48,97 @@ namespace HHBot
             // 
             this.GridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Col_ID,
-            this.Col_Name,
-            this.Col_Salary_from,
-            this.Col_Salary_to,
-            this.Col_Salary_curr,
-            this.Col_empl,
-            this.Col_addr,
-            this.Col_info});
+            this.colID,
+            this.colName,
+            this.colSalaryFrom,
+            this.colSalaryTo,
+            this.colSalaryCurr,
+            this.colEmployer,
+            this.colAddress,
+            this.colInfo});
             this.GridView.Dock = System.Windows.Forms.DockStyle.Top;
             this.GridView.Location = new System.Drawing.Point(0, 0);
             this.GridView.Name = "GridView";
             this.GridView.RowTemplate.Height = 25;
-            this.GridView.Size = new System.Drawing.Size(1107, 248);
+            this.GridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.GridView.Size = new System.Drawing.Size(1107, 380);
             this.GridView.TabIndex = 3;
+            // 
+            // colID
+            // 
+            this.colID.HeaderText = "ID";
+            this.colID.Name = "colID";
+            // 
+            // colName
+            // 
+            this.colName.HeaderText = "Вакансия";
+            this.colName.Name = "colName";
+            // 
+            // colSalaryFrom
+            // 
+            this.colSalaryFrom.HeaderText = "Зарплата от";
+            this.colSalaryFrom.Name = "colSalaryFrom";
+            // 
+            // colSalaryTo
+            // 
+            this.colSalaryTo.HeaderText = "Зарплата до";
+            this.colSalaryTo.Name = "colSalaryTo";
+            // 
+            // colSalaryCurr
+            // 
+            this.colSalaryCurr.HeaderText = "Валюта";
+            this.colSalaryCurr.Name = "colSalaryCurr";
+            // 
+            // colEmployer
+            // 
+            this.colEmployer.HeaderText = "Компания";
+            this.colEmployer.Name = "colEmployer";
+            // 
+            // colAddress
+            // 
+            this.colAddress.HeaderText = "Адрес";
+            this.colAddress.Name = "colAddress";
+            // 
+            // colInfo
+            // 
+            this.colInfo.HeaderText = "Описание";
+            this.colInfo.MinimumWidth = 100;
+            this.colInfo.Name = "colInfo";
+            this.colInfo.Width = 400;
             // 
             // searchBox
             // 
-            this.searchBox.Location = new System.Drawing.Point(13, 264);
+            this.searchBox.Location = new System.Drawing.Point(22, 415);
             this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(694, 23);
+            this.searchBox.Size = new System.Drawing.Size(330, 23);
             this.searchBox.TabIndex = 4;
             // 
             // buttonSearch
             // 
-            this.buttonSearch.Location = new System.Drawing.Point(713, 264);
+            this.buttonSearch.Location = new System.Drawing.Point(377, 414);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(75, 23);
             this.buttonSearch.TabIndex = 5;
             this.buttonSearch.Text = "Поиск";
             this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
-            // Col_ID
+            // lblCount
             // 
-            this.Col_ID.HeaderText = "ID";
-            this.Col_ID.Name = "Col_ID";
-            // 
-            // Col_Name
-            // 
-            this.Col_Name.HeaderText = "Name";
-            this.Col_Name.Name = "Col_Name";
-            // 
-            // Col_Salary_from
-            // 
-            this.Col_Salary_from.HeaderText = "Зарплата от";
-            this.Col_Salary_from.Name = "Col_Salary_from";
-            // 
-            // Col_Salary_to
-            // 
-            this.Col_Salary_to.HeaderText = "Зарплата до";
-            this.Col_Salary_to.Name = "Col_Salary_to";
-            // 
-            // Col_Salary_curr
-            // 
-            this.Col_Salary_curr.HeaderText = "Валюта";
-            this.Col_Salary_curr.Name = "Col_Salary_curr";
-            // 
-            // Col_empl
-            // 
-            this.Col_empl.HeaderText = "Employer";
-            this.Col_empl.Name = "Col_empl";
-            // 
-            // Col_addr
-            // 
-            this.Col_addr.HeaderText = "Адрес";
-            this.Col_addr.Name = "Col_addr";
-            // 
-            // Col_info
-            // 
-            this.Col_info.HeaderText = "Описание";
-            this.Col_info.MinimumWidth = 100;
-            this.Col_info.Name = "Col_info";
-            this.Col_info.Width = 400;
+            this.lblCount.AccessibleDescription = "";
+            this.lblCount.AutoSize = true;
+            this.lblCount.Location = new System.Drawing.Point(530, 421);
+            this.lblCount.Name = "lblCount";
+            this.lblCount.Size = new System.Drawing.Size(104, 15);
+            this.lblCount.TabIndex = 6;
+            this.lblCount.Text = "Вакансий всего: 0";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1107, 450);
+            this.Controls.Add(this.lblCount);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.searchBox);
             this.Controls.Add(this.GridView);
@@ -140,14 +154,15 @@ namespace HHBot
         private System.Windows.Forms.DataGridView GridView;
         private System.Windows.Forms.TextBox searchBox;
         private System.Windows.Forms.Button buttonSearch;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Col_ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Col_Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Col_Salary_from;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Col_Salary_to;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Col_Salary_curr;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Col_empl;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Col_addr;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Col_info;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSalaryFrom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSalaryTo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSalaryCurr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colEmployer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colAddress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colInfo;
+        private System.Windows.Forms.Label lblCount;
     }
 }
 
