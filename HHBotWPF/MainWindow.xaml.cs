@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using HHLibrary;
+
 
 namespace HHBotWPF
 {
@@ -36,8 +38,22 @@ namespace HHBotWPF
 
             foreach (Vacancy vacancy in v)
             {
-                ResListBox.Items.Add(vacancy.id + " " + vacancy.name);
+                ListBoxItem item = new ListBoxItem();
+                item.Content = vacancy.id + " " + vacancy.name;
+                item.Tag = vacancy.info;
 
+                ResListBox.Items.Add(item);
+
+            }
+        }
+
+        private void infoButton_Click(object sender, RoutedEventArgs e)
+        {
+            ListBoxItem item = (ListBoxItem)ResListBox.SelectedItem;
+            if (item != null)
+            {
+                //MessageBox.Show(item.Tag.ToString());
+                Process.Start("C:\\Program Files\\Google\\Chrome\\Application\\Chrome.exe", item.Tag.ToString());
             }
         }
     }

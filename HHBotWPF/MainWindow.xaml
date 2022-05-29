@@ -18,6 +18,11 @@
             </TextBox.Effect>
         </TextBox>
         <ListBox x:Name="ResListBox" Margin="10,53,10,25"/>
+        <Button x:Name="infoButton" Content="Инфо" HorizontalAlignment="Left" Margin="434,10,0,0" VerticalAlignment="Top" Width="79" Click="infoButton_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
 
     </Grid>
 </Window>
