@@ -47,9 +47,9 @@ namespace HHLibrary
             {
                 this.address = "-";
             }
-            if (obj.description != null)
+            if (obj.alternate_url != null)
             {
-                this.info = obj.description;
+                this.info = obj.alternate_url;
             }
             else
             {
