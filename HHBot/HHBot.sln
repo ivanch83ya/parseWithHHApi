@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HHBot", "HHBot.csproj", "{1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HHLibrary", "..\HHLibrary\HHLibrary.csproj", "{FA534ABF-4511-4403-AEF1-41D01F729B97}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HHBotWPF", "..\HHBotWPF\HHBotWPF.csproj", "{29CC0A34-8E2B-4615-91DE-193B8454D550}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FA534ABF-4511-4403-AEF1-41D01F729B97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA534ABF-4511-4403-AEF1-41D01F729B97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA534ABF-4511-4403-AEF1-41D01F729B97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29CC0A34-8E2B-4615-91DE-193B8454D550}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29CC0A34-8E2B-4615-91DE-193B8454D550}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29CC0A34-8E2B-4615-91DE-193B8454D550}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29CC0A34-8E2B-4615-91DE-193B8454D550}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

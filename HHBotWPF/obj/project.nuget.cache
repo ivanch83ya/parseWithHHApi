@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "YLMFA2ZeWurXsXrVBks31n3LiKrbQ5eTXuJFOvQN4mgeoLi5LKgk1ymYUSglRoswhN3IzWohqb3TcM49hmvrqw==",
+  "success": true,
+  "projectFilePath": "I:\\Udemy\\HH_Api\\HHBotWPF\\HHBotWPF.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\vladi\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\vladi\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.16\\microsoft.netcore.app.host.win-x64.5.0.16.nupkg.sha512"
+  ],
+  "logs": []
+}
